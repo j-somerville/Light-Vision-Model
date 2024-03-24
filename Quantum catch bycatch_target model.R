@@ -515,21 +515,6 @@ colourplotIb2<-ggplot(thornbackray_sole, aes(fill=species, y=qc_total_Ib_20m, x=
   scale_fill_grey(start = 0.7, end=0.5, labels=c('Sole', 'Thornback ray'))
 colourplotIb2
 
-
-colourplot3c<-ggplot(thornbackray_sole, aes(fill=species, y=qc_total_3C_20m, x=colour)) +
-  geom_bar(position="dodge", stat="identity")+
-  labs(x = "LED colour modes", 
-       y = "Visual stimulation at 
-   20m in coastal waters",
-       fill= "Species")+
-  theme_bw()+
-  theme(axis.text.x = element_text(size = 7))+   
-  theme(text = element_text(size=11))+
-  scale_x_discrete(labels = label_wrap(10)) +  theme(text = element_text(size=11))+
-  scale_x_discrete(labels=c('Amber', 'Blue', 'Cyan', 'Green', 'Red','Royal blue', 'White'))+
-  scale_fill_grey(start = 0.7, end=0.5, labels=c('Sole', 'Thornback ray'))
-colourplot3c
-
 ggarrange(colourplotIII,colourplotIII2, colourplotIb,colourplotIb2, ncol=2, nrow=2, common.legend = TRUE, legend="bottom")
 
 ##nephrops
